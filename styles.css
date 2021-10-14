@@ -1,0 +1,1109 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: hsl(208, 49%, 24%);
+    font-weight: 600;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.show{
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rotate{
+    transform: rotate(-180deg);
+    transition: ease-in-out 0.5s;
+}
+
+.color-change{
+    color: hsla(208, 49%, 24%, 0.733) !important;
+}
+
+@media screen and (min-width: 320px) {
+    header{
+        background-image: linear-gradient(to bottom,  hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        border-bottom-left-radius: 100px;
+    }
+    
+    header .header-bg{
+        background-image: url(images/bg-pattern-intro.svg);
+        background-size: 350%;
+        background-position: -270px -175px;
+        background-repeat: no-repeat; 
+        padding-bottom: 100px;
+        height: 100%;
+        border-bottom-left-radius: 100px;
+    }
+    
+    header .header-bg nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 9vw;
+        position: relative;
+    }
+    
+    header .header-bg nav .company-logo img{
+        width: 20vw;
+        margin-top: 10px;
+    }
+    
+    header .header-bg nav .nav-links{
+        display: none;
+    }
+    
+    header .header-bg nav .hamburger .hamburger-icon{
+        width: 26px;
+        height: 20px;
+        background-image: url(images/icon-hamburger.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        transition: 0.1s ease-in;
+    } 
+
+    header .header-bg nav .hamburger .close{
+        background-image: url(images/icon-close.svg);
+        transition: 0.1s ease-in;
+        
+    }
+    
+    header .header-bg nav .hamburger .hamburger-content{
+        display: none;
+        width: 82%;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 8px;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        margin: 0 9vw;
+        padding: 0 7vw;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1), -3px 0  5px rgba(0, 0, 0, 0.1);
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div{
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div:nth-child(3){
+        border-bottom: 1px solid hsl(240, 2%, 79%);
+        padding-bottom: 20px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div:nth-child(4){
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div:nth-child(4) a:first-child{
+        color: hsl(208, 49%, 24%);
+        margin-bottom: 20px;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+
+    
+    header .header-bg nav .hamburger .hamburger-content > div:nth-child(4) a:last-child{
+        color: hsl(0, 0%, 100%);
+        background: linear-gradient(to right,  hsl(13, 100%, 72%), hsl(353, 100%, 62%));  
+        padding: 15px 45px;
+        border-radius: 50px;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 4.5vw;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div span{
+        color:  hsl(208, 49%, 24%);
+        font-size: 5vw;
+        font-weight: 600;
+        margin-right: 5px;
+        padding: 5px 0;
+    }
+    header .header-bg nav .hamburger .hamburger-content > div img{
+        position: relative;
+        top: -2px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div .dropdowns{
+        display: none;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div .dropdown-show{
+        display: block;
+        background-color: hsla(240, 3%, 79%, 0.342);
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div .dropdown-show:last-child{
+        margin: 20px 0 0;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div .dropdowns ul li:not(:last-child){
+        margin-bottom: 15px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div .dropdowns ul li a{
+        color: hsla(208, 49%, 24%, 0.733);
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+    
+    header .header-bg .header-intro{
+        padding: 15vw 20px;
+        text-align: center;
+    }
+    
+    header .header-bg .header-intro h2{
+        color: hsl(0, 0%, 100%);
+        font-size: 9.5vw;
+        margin-bottom: 5vw;
+        padding: 0 2vw;
+    }
+    
+    header .header-bg .header-intro p{
+        color: hsla(0, 0%, 100%, 0.877);
+        font-size: 5vw;
+        margin-bottom: 12vw;
+    }
+    
+    header .header-bg .header-intro .buttons{
+        text-align: left;
+        padding: 0 5vw;
+    }
+    
+    header .header-bg .header-intro .buttons button{
+        border: 1px solid hsl(0, 0%, 100%);
+        padding: 3.5vw 6vw;
+        background-color: transparent;
+        color: hsl(0, 0%, 100%);
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 4vw;
+        font-weight: 700;
+        border-radius: 50px;
+    }
+    
+    header .header-bg .header-intro .buttons button:nth-child(1){
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(353, 100%, 62%);
+        margin-right: 10px;
+    }
+    
+    .middle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 90px 0 240px;
+    }
+    
+    .middle h2{
+        font-size: 7.5vw;
+    }
+    
+    .middle .middle-content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 0;
+    }
+    
+    .middle .middle-content .right img{
+        width: 100%;
+    }
+    
+    .middle .middle-content .left{
+        margin: 40px 28px 0 28px;
+    
+    }
+    
+    .middle .middle-content .left > div{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .middle .middle-content .left > div:nth-child(2){
+        margin-bottom: 0;
+    }
+    
+    .middle .middle-content .left > div h3{
+        font-size: 8vw;
+        line-height: 1.2;
+        margin-bottom: 5vw;
+    }
+    
+    .middle .middle-content .left > div p{
+        color:   hsl(207, 13%, 34%);
+        font-size: 4.6vw;
+        line-height: 1.8;
+    } 
+    
+    .state{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 100px 0 100px;
+        background-image: url(images/bg-pattern-circles.svg), linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+        background-size: cover, cover;
+        background-repeat: no-repeat, repeat;
+        background-position: -30.38vw -68vw, 0 0;
+    }
+    
+    .state .top{
+        margin-top: -155px;
+    }
+    
+    .state .top img{
+        width: 100%;
+    }
+    
+    .state .bottom{
+        text-align: center;
+        padding-bottom: 100px;
+    }
+    
+    .state .bottom h2{
+        color: hsl(0, 0%, 100%);
+        font-size: 9vw;
+        margin-bottom: 5vw;
+    }
+    
+    .state .bottom p{
+        color: hsla(0, 0%, 100%, 0.959); 
+        font-size: 4.5vw;
+        padding: 0 8vw;
+        line-height: 1.8;
+    }
+    
+    .laptop{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 0px;
+    }
+    
+    .laptop .left{
+        margin-bottom: 9vw;
+    }
+    
+    .laptop .left img{
+        width: 100%;
+    }
+    
+    .laptop .right > div{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .laptop .right > div:nth-child(2){
+        margin-bottom: 0;
+    }
+    
+    .laptop .right > div h2{
+        font-size: 7vw;
+        margin-bottom: 5vw;
+    }
+    
+    .laptop .right > div p{
+        color: hsl(207, 13%, 34%);
+        font-size: 4.5vw;
+        padding: 0 8vw;
+    }
+    
+    footer{
+        background-color:  hsl(240, 10%, 16%);
+        border-top-right-radius: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 75px 20px;
+    }
+    
+    
+    footer > div{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    footer > div:first-child{
+        margin-bottom: 60px;
+    }
+    
+    footer > div:nth-child(4){
+        margin-bottom: 0;
+    }
+    
+    footer > div:not(:first-child) > ul > li:first-child{
+        color: hsl(0, 0%, 100%);
+        font-size: 5vw;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    
+    footer > div:not(:first-child) > ul > li:not(:first-child){
+        margin-bottom: 10px;
+    }
+    
+    footer > div:not(:first-child) > ul > li:not(:first-child) > a{
+        color:  hsl(240, 2%, 79%);
+        font-size: 4.5vw;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 360px){
+    header .header-bg{
+        background-position: -305px -210px;
+    }
+
+    .state{
+        background-position: -31.38vw -63vw, 0 0;
+    }
+
+    .state .bottom{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 375px){
+    header .header-bg{
+        background-position: -315px -220px;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(1){
+        margin-right: 20px;
+    }
+
+    .state{
+        background-position: -34.38vw -62vw, 0 0;
+    }
+}
+
+@media screen and (min-width: 411px){
+    header .header-bg{
+        background-position: -355px -260px;
+    }
+
+    .state{
+        background-position: -36.38vw -62vw, 0 0;
+    }
+
+    .state .bottom{
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (min-width: 459px){
+    header .header-bg{
+        background-position: -375px -290px;
+    }
+
+    header .header-bg .header-intro h2{
+        font-size: 9.3vw;
+        padding: 0 3vw;
+    }
+
+    header .header-bg .header-intro p{
+        padding: 0 4vw;
+    }
+
+    header .header-bg .header-intro .buttons{
+        padding: 0 6vw;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(1){
+        margin-right: 25px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div:first-child{
+        margin-top: 50px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div:nth-child(4) a:last-child{
+        margin-bottom: 30px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content{
+        top: 140px;
+    }
+}
+
+@media screen and (min-width: 505px){
+    header .header-bg{
+        background-position: -420px -330px;
+    }
+
+    header .header-bg .header-intro h2{
+        font-size: 9.5vw;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(1){
+        margin-right: 35px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div img{
+        top: -5px;
+    }
+}
+
+@media screen and (min-width: 657px){
+    header{
+        border-bottom-left-radius: 180px;
+    }
+
+    header .header-bg{
+        background-position: -550px -480px;
+        border-bottom-left-radius: 180px;
+    }
+
+    header .header-bg nav .company-logo img{
+        width: 15vw;
+    }
+
+    header .header-bg .header-intro h2{
+        padding: 0 5vw;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(1){
+        margin-right: 60px;
+    }
+
+    .middle{
+        margin: 150px 0 360px;
+    }
+
+    .middle .middle-content{
+        padding: 60px 0 0;
+    }
+
+    .middle .middle-content .left{
+        margin: 60px 45px 0 45px;
+    }
+
+    .middle .middle-content .left > div{
+        margin-bottom: 70px;
+    }
+
+    .middle .middle-content .left > div h3{
+        padding: 0 5vw;
+    }
+
+    .middle .middle-content .left > div p{
+        font-size: 4vw;
+        padding: 0 5vw
+    }
+
+    .state {
+        background-position: -32.38vw -65vw, 0 0;
+        border-radius: 0 180px 0 180px;
+    }
+
+    .state .top{
+        margin-top: -250px;
+    }
+
+    .state .bottom{
+        margin-top: 50px;
+        padding-bottom: 180px;
+    }
+
+    .laptop{
+        margin: 100px 0 150px;
+    }
+
+    .laptop .right > div{
+        margin-bottom: 70px;
+    }
+
+    footer{
+        border-top-right-radius: 180px;
+        padding: 155px 20px;
+    }
+
+    footer > div:first-child{
+        width: 170px;
+        margin-bottom: 100px;
+    }
+
+    footer > div:first-child img{
+        width: 100%;
+    }
+
+    footer > div:not(:first-child) > ul > li:first-child, footer > div{
+        margin-bottom: 50px;
+    }
+
+    footer > div:not(:first-child) > ul > li:not(:first-child){
+        margin-bottom: 20px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content{
+        top: 170px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div span, header .header-bg nav .hamburger .hamburger-content > div:nth-child(4) a:first-child{
+        font-size: 4vw;
+    }
+
+    header .header-bg nav .hamburger .hamburger-content > div:nth-child(4) a:last-child, header .header-bg nav .hamburger .hamburger-content > div .dropdowns ul li a{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header .header-bg{
+        background-position: -650px -580px;
+    }
+
+    header .header-bg nav .hamburger .hamburger-icon{
+        width: 32px;
+        height: 32px;
+    }
+
+    .state {
+        background-position: -28.38vw -65vw, 0 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    header{
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        border-bottom-left-radius: 120px;
+    }
+
+    header .header-bg{
+        background-size: 200%;
+        background-position: -300px -650px;
+        border-bottom-left-radius: 120px;
+        padding-bottom: 50px;
+    }
+
+    header .header-bg nav{
+        padding: 50px 5vw;
+    }
+
+    header .header-bg nav .company-logo{
+        flex: 10%;
+    }
+
+    header .header-bg nav .company-logo img{
+        width: 10vw;
+    }
+
+    header .header-bg nav .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center ;
+        width: 100%;
+        flex: 70%;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div{
+        position: relative;
+        padding: 1.5vw 0;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div{
+        display: none;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div span{
+        color: hsl(0, 0%, 100%);
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.5vw;
+        font-weight: 500;
+        margin-right: 5px;
+        padding: 1.5vw 0;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div:hover > div{
+        display: block;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div{
+        position: absolute;
+        background-color: hsl(0, 0%, 100%);
+        top: 3.4vw;
+        left: -30px;
+        margin-block-start: 1.5vw;
+        padding: 2vw 3vw;
+        border-radius: 5px;
+        z-index: 1;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        min-width: 140px
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div ul li:not(:last-child){
+        margin-bottom: 1vw;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div ul li a{
+        color: hsl(240, 10%, 16%);
+        font-size: 1.25vw;
+        font-weight: 600;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div ul li a:hover{
+        font-size: 1.35vw;
+        font-weight: 700;
+        transition: 0.2s ease-in-out;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div span:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div span:hover + img{
+        transform: rotate(-180deg);
+    }
+
+    header .header-bg nav .nav-links .nav-links-right{
+        width: 30%;
+    }
+
+    header .header-bg nav .nav-links .nav-links-right a{
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: hsl(0, 0%, 100%);
+    }
+
+    header .header-bg nav .nav-links .nav-links-right a:hover{
+        text-decoration: underline;
+    }
+
+    header .header-bg nav .nav-links .nav-links-right a:first-child{
+        margin-right: 25px;
+    }
+
+    header .header-bg nav .nav-links .nav-links-right a:last-child{
+        padding: 15px 40px;
+        color: hsl(356, 100%, 66%);
+        background-color: hsl(0, 0%, 100%);
+        font-weight: 700;
+        border-radius: 50px;
+        border: 1px solid hsl(13, 100%, 72%);
+    }
+
+    header .header-bg nav .nav-links .nav-links-right a:last-child:hover{
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        background-color: hsla(355, 100%, 74%, 0.788);
+        border: 1px solid hsla(355, 100%, 74%, 0.788);
+    }
+
+    header .header-bg nav .hamburger{
+        display: none;
+    }
+
+    header .header-bg .header-intro{
+        padding: 8vw 2vw 10vw; 
+    }
+
+    header .header-bg .header-intro h2{
+        font-size: 5vw;
+        margin-bottom: 10px;
+    }
+
+    header .header-bg .header-intro p{
+        font-size: 2vw;
+        margin-bottom: 40px;
+    }
+
+    header .header-bg .header-intro .buttons{
+        text-align: center;
+    }
+
+    header .header-bg .header-intro .buttons button{
+        font-size: 1.5vw;
+        padding: 1.5vw 2vw;
+        cursor: pointer;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(1){
+        margin-right: 20px;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(1):hover{
+        color: hsl(0, 0%, 100%);
+        background-color:  hsl(355, 100%, 74%);
+        border: 1px solid hsl(355, 100%, 74%);
+        transition: all 0.3s ease-out;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(2){
+        padding: 1.5vw 3.5vw;
+    }
+
+    header .header-bg .header-intro .buttons button:nth-child(2):hover{
+        color: hsl(356, 100%, 66%);
+        background-color: hsl(0, 0%, 100%);
+        transition: all 0.3s ease-in;
+    }
+
+    .middle{
+        margin: 0;
+        padding: 15vw 5vw 20vw;
+        background-image: url(images/illustration-editor-desktop.svg);
+        background-size: 78%;
+        background-position: 228% 75%;
+        background-repeat: no-repeat;
+    }
+
+    .middle h2{
+        font-size: 3.5vw;
+    }
+
+    .middle .middle-content{
+        flex-direction: row;
+        padding: 9vw 0 0;
+    }
+
+    .middle .middle-content .left{
+        margin: 0;
+        flex: 40%;
+    }
+
+    .middle .middle-content .left > div{
+        text-align: left;
+    }
+
+    .middle .middle-content .left > div h3{
+        font-size: 2.1vw;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .middle .middle-content .left > div p{
+        font-size: 1.3vw;
+        padding: 0;
+    }
+
+    .middle .middle-content .right{
+        margin-top: -50px;
+        flex: 50%;
+        opacity: 0;
+    }
+
+    .state{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 0 120px;
+        padding: 0 10vw;
+        max-height: 27vw;
+        background-size: 90%;
+        background-position: -18.5vw -50vw, 0 0;
+    }
+
+    .state .top{
+        margin-top: 3vw;
+        width: 40%;
+    }
+
+    .state .top img{
+        width: 110%;
+    }
+
+    .state .bottom{
+        width: 50%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .state .bottom h2{
+        font-size: 2.5vw;
+        margin: 2vw 0 1.5vw;
+    }
+
+    .state .bottom p{
+        font-size: 1.2vw;
+        padding: 0 0 20px;
+    }
+
+    .laptop{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+        padding: 20vw 10vw;
+        background-image: url(images/illustration-laptop-desktop.svg);
+        background-size: 78%;
+        background-repeat: no-repeat;
+        background-position: -125% 50%;
+    }
+
+    .laptop .left{
+        margin: 0;
+        opacity: 0;
+        width: 40%;
+    }
+
+    .laptop .right{
+        width: 50%;
+    }
+
+    .laptop .right > div{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .laptop .right > div h2{
+        font-size: 2.1vw;
+        margin-bottom: 20px;
+    }
+
+    .laptop .right > div p{
+        font-size: 1.3vw;
+        padding: 0;
+        line-height: 1.8;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content:left;
+        align-items: flex-start;
+        border-top-right-radius: 120px;
+        padding: 7.5vw 5vw;
+    }
+
+    footer > div{
+        text-align: left;
+        margin-bottom: 0;
+        margin-right: 13.68vw;
+    }
+
+    footer > div:not(:first-child){
+        margin-top: 0.78vw;
+    }
+
+    footer > div:first-child{
+        width: 9%;
+        margin-bottom: 0;
+    }
+
+    footer > div:not(:first-child) > ul > li:first-child{
+        font-size: 1.4vw;
+        margin-bottom: 2.9vw;
+    }
+
+    footer > div:not(:first-child) > ul > li:not(:first-child){
+        margin-bottom: 1vw;
+    }
+
+    footer > div:not(:first-child) > ul > li:not(:first-child) > a{
+        font-size: 1.2vw;
+    }
+
+    footer > div:not(:first-child) > ul > li:not(:first-child) > a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    header .header-bg{
+        background-size: 220%;
+        background-position: -400px -1050px;
+    }
+
+    .middle{    background-position: 228% 82%;
+    }
+
+    footer > div{
+        margin-right: 14vw;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    header .header-bg{   
+        background-size: 250%;
+        background-position: -580px -1500px;
+
+    }
+
+    header .header-bg nav{
+        padding: 50px 7.5vw;
+    }
+
+    header .header-bg nav .company-logo{
+        flex: 2%;
+    }
+
+    header .header-bg nav .company-logo img{
+        width: 7.5vw;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left{
+        width: 32%;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div, header .header-bg nav .nav-links .nav-links-left > div span{
+        padding: 1.7vw 0;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div span{
+        font-size: 1.2vw;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div{
+        padding: 1.5vw 2vw;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div ul li a{
+        font-size: 1vw;
+    }
+
+    header .header-bg nav .nav-links .nav-links-left > div > div ul li a:hover{
+        font-size: 1vw;
+    }
+
+    header .header-bg nav .nav-links .nav-links-right{
+        width: auto;
+    }
+
+    header .header-bg nav .nav-links .nav-links-right a{
+        font-size: 1.1vw;
+    }
+
+    header .header-bg .header-intro h2{
+        font-size: 4.3vw;
+    }
+
+    header .header-bg .header-intro p{
+        font-size: 1.5vw;
+    }
+
+    header .header-bg .header-intro .buttons button, header .header-bg .header-intro .buttons button:nth-child(2){
+        font-size: 1vw;
+        padding: 1vw 2vw;
+    }
+
+    .middle{
+        padding: 10vw 7.5vw;
+        background-size: 65%;
+        background-position: 155% 62%;
+    }
+
+    .middle h2{
+        font-size: 2.9vw;
+    }
+
+    .middle .middle-content{
+        align-items: flex-start;
+    }
+
+    .middle .middle-content .left{
+        flex: 30%;
+    }
+
+    .middle .middle-content .left > div h3, .laptop .right > div h2{
+        font-size: 1.7vw;
+    }
+
+    .middle .middle-content .left > div p{
+        font-size: 1.08vw;
+    }
+
+    .state{
+        padding: 0 7.5vw;
+        justify-content: space-between;
+    }
+
+    .state .top{
+        width: 41%;
+        margin-left: -2.5vw;
+        margin-top: 3.4vw;
+    }
+
+    .state .bottom h2{
+        font-size: 2.3vw;
+    }
+
+    .state .bottom p, .laptop .right > div p{
+        font-size: 1vw;
+        padding-right: 10vw;
+    }
+
+    .laptop{
+        padding: 20vw 7.5vw;
+        justify-content: space-between;
+        background-size: 59%;
+        background-repeat: no-repeat;
+        background-position: -41% 50%;
+    }
+
+    footer{
+        padding: 5vw 7.5vw;
+    }
+
+    footer > div:first-child{
+        width: 8%;
+    }
+
+    footer > div:not(:first-child) > ul > li:first-child{
+        font-size: 1.1vw;
+        margin-bottom: 2.1vw;
+    }
+
+    footer > div:not(:first-child) > ul > li:not(:first-child) > a{
+        font-size: 1vw;
+    }
+}
+
+@media screen and (min-width: 1536px) {
+    header .header-bg{
+        background-position: -630px -1600px;
+    }
+}
